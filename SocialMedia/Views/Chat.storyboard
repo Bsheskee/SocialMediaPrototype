@@ -69,7 +69,7 @@
         <!--ChatVC-->
         <scene sceneID="WeP-8z-wwi">
             <objects>
-                <viewController id="PdC-0d-2ZV" customClass="ChatVC" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="PdC-0d-2ZV" customClass="ChatVC" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z2m-6H-70W">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wIZ-BW-3YK">
                                 <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PdC-0d-2ZV" id="mFm-S6-Q9x"/>
+                                    <outlet property="delegate" destination="PdC-0d-2ZV" id="B4M-18-9S6"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G9w-uR-roD"/>
@@ -108,7 +112,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-D4-MvB" customClass="DesignableTextField" customModule="Photos" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-D4-MvB" customClass="DesignableTextField" customModule="SocialMedia" customModuleProvider="target">
                             <rect key="frame" x="16" y="8" width="297" height="35"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct User {
+struct User: Equatable {
     let name: String
     let email: String
     let photo: UIImage?
