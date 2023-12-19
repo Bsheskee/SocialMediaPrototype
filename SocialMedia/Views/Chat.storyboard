@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pYM-ES-qCN">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UsersVC-->
+        <scene sceneID="TMB-AA-PF2">
+            <objects>
+                <viewController id="pYM-ES-qCN" customClass="UsersVC" customModule="SocialMedia" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIf-52-KYf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1rz-UV-3ut">
+                                <rect key="frame" x="0.0" y="139" width="393" height="630"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" id="V4M-t7-z7G">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V4M-t7-z7G" id="Iso-nf-YKB">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pYM-ES-qCN" id="pfG-Tk-7fo"/>
+                                    <outlet property="delegate" destination="pYM-ES-qCN" id="HUD-J4-c4P"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1Q-FH-zsV">
+                                <rect key="frame" x="296" y="99" width="82" height="35"/>
+                                <color key="tintColor" name="Accent"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <action selector="logOutTapped:" destination="pYM-ES-qCN" eventType="touchUpInside" id="SwI-TU-6jg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZzU-MG-iR3"/>
+                        <color key="backgroundColor" name="Accent2"/>
+                        <constraints>
+                            <constraint firstItem="1rz-UV-3ut" firstAttribute="top" secondItem="N1Q-FH-zsV" secondAttribute="bottom" constant="5" id="A9P-2e-FK4"/>
+                            <constraint firstItem="ZzU-MG-iR3" firstAttribute="bottom" secondItem="1rz-UV-3ut" secondAttribute="bottom" id="ZC9-HE-rI8"/>
+                            <constraint firstItem="ZzU-MG-iR3" firstAttribute="trailing" secondItem="N1Q-FH-zsV" secondAttribute="trailing" constant="15" id="b1n-so-IQt"/>
+                            <constraint firstItem="1rz-UV-3ut" firstAttribute="leading" secondItem="ZzU-MG-iR3" secondAttribute="leading" id="jaL-BV-Boe"/>
+                            <constraint firstItem="ZzU-MG-iR3" firstAttribute="trailing" secondItem="1rz-UV-3ut" secondAttribute="trailing" id="tFP-Fb-xXB"/>
+                            <constraint firstItem="1rz-UV-3ut" firstAttribute="top" secondItem="ZzU-MG-iR3" secondAttribute="top" constant="80" id="xhi-5b-Kmh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="bubble.left.fill" catalog="system" id="7T7-nC-ScN"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="usersTableView" destination="1rz-UV-3ut" id="uiQ-c4-Ep1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f43-FJ-8N8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4527" y="134"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="WeP-8z-wwi">
+            <objects>
+                <viewController id="PdC-0d-2ZV" customClass="ChatVC" customModule="SocialMedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z2m-6H-70W">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wIZ-BW-3YK">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G9w-uR-roD"/>
+                        <color key="backgroundColor" name="Accent2"/>
+                        <constraints>
+                            <constraint firstItem="G9w-uR-roD" firstAttribute="bottom" secondItem="wIZ-BW-3YK" secondAttribute="bottom" id="5Jg-ed-INg"/>
+                            <constraint firstItem="wIZ-BW-3YK" firstAttribute="leading" secondItem="G9w-uR-roD" secondAttribute="leading" id="L5L-v5-zQX"/>
+                            <constraint firstItem="wIZ-BW-3YK" firstAttribute="top" secondItem="G9w-uR-roD" secondAttribute="top" id="NvF-hs-Quz"/>
+                            <constraint firstItem="wIZ-BW-3YK" firstAttribute="trailing" secondItem="G9w-uR-roD" secondAttribute="trailing" id="jwF-ae-Cnj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" style="editor" id="d9V-45-LBD">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="B7S-2n-QBP">
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <action selector="logOutPressed:" destination="PdC-0d-2ZV" id="OtH-d6-mvF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="messageTextfield" destination="HQ5-D4-MvB" id="z9i-ZZ-442"/>
+                        <outlet property="messageView" destination="7uS-SM-TzA" id="e5F-9b-8S2"/>
+                        <outlet property="tableView" destination="wIZ-BW-3YK" id="zDy-ga-OSM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jUa-O2-oFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="7uS-SM-TzA" customClass="DesignableView" customModule="SocialMedia" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQ5-D4-MvB" customClass="DesignableTextField" customModule="Photos" customModuleProvider="target">
+                            <rect key="frame" x="16" y="8" width="297" height="35"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="82T-ze-oFR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lr-NL-j6g">
+                            <rect key="frame" x="329" y="4" width="30" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="IB4-LW-g5I"/>
+                                <constraint firstAttribute="width" constant="30" id="hT0-2o-QGf"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
+                            <state key="normal" image="paperplane.fill" catalog="system">
+                                <color key="titleColor" systemColor="systemBackgroundColor"/>
+                            </state>
+                            <connections>
+                                <action selector="sendPressed:" destination="PdC-0d-2ZV" eventType="touchUpInside" id="2rJ-Rt-rik"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUj-aj-hVx">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="oFX-3a-OJn"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="6LQ-aL-Zss"/>
+                    <color key="backgroundColor" name="Accent2"/>
+                    <constraints>
+                        <constraint firstItem="cUj-aj-hVx" firstAttribute="leading" secondItem="7uS-SM-TzA" secondAttribute="leading" id="3dF-MZ-g48"/>
+                        <constraint firstItem="HQ5-D4-MvB" firstAttribute="top" secondItem="7uS-SM-TzA" secondAttribute="top" constant="8" id="9pg-78-NBA"/>
+                        <constraint firstAttribute="bottom" secondItem="5Lr-NL-j6g" secondAttribute="bottom" constant="24" id="BeC-zW-Ozn"/>
+                        <constraint firstAttribute="bottom" secondItem="HQ5-D4-MvB" secondAttribute="bottom" constant="20" id="FeC-2G-kzZ"/>
+                        <constraint firstItem="cUj-aj-hVx" firstAttribute="top" secondItem="7uS-SM-TzA" secondAttribute="top" id="G9o-aS-Mrn"/>
+                        <constraint firstItem="5Lr-NL-j6g" firstAttribute="leading" secondItem="HQ5-D4-MvB" secondAttribute="trailing" constant="16" id="U3i-xs-r5M"/>
+                        <constraint firstItem="HQ5-D4-MvB" firstAttribute="leading" secondItem="7uS-SM-TzA" secondAttribute="leading" constant="16" id="dLe-9a-4Mk"/>
+                        <constraint firstAttribute="trailing" secondItem="cUj-aj-hVx" secondAttribute="trailing" id="jdo-wd-NIH"/>
+                        <constraint firstAttribute="trailing" secondItem="5Lr-NL-j6g" secondAttribute="trailing" constant="16" id="vl5-d5-NKC"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="5471" y="134"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="HQ5-D4-MvB">
+            <size key="intrinsicContentSize" width="97" height="15"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <namedColor name="Accent">
+            <color red="0.58039215686274515" green="0.2196078431372549" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Accent2">
+            <color red="0.8666666666666667" green="0.82745098039215681" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
