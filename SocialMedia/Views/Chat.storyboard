@@ -12,7 +12,7 @@
         <!--UsersVC-->
         <scene sceneID="TMB-AA-PF2">
             <objects>
-                <viewController id="pYM-ES-qCN" customClass="UsersVC" customModule="SocialMedia" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UsersVC" id="pYM-ES-qCN" customClass="UsersVC" customModule="SocialMedia" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kIf-52-KYf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,9 @@
                     <tabBarItem key="tabBarItem" title="" image="bubble.left.fill" catalog="system" id="7T7-nC-ScN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="logOutButton" destination="N1Q-FH-zsV" id="rvX-U5-dVu"/>
                         <outlet property="usersTableView" destination="1rz-UV-3ut" id="uiQ-c4-Ep1"/>
+                        <segue destination="Z2f-iO-NRf" kind="show" identifier="WelcomeVC" id="pif-xr-qEi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f43-FJ-8N8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -170,6 +172,16 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="5471" y="134"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="lBy-Ui-wRc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Z2f-iO-NRf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dvt-60-a5Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fha-hz-Ozc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5047" y="-268"/>
         </scene>
     </scenes>
     <designables>
